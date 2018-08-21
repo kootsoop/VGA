@@ -1,5 +1,5 @@
-PLL_Name	pll:C|pll_altpll_0:altpll_0|altpll:sd1|pll
-PLLJITTER	31
+PLL_Name	pll:C|pll_altpll_0:altpll_0|pll_altpll_0_altpll_bb42:sd1|pll7
+PLLJITTER	20
 PLLSPEmax	84
 PLLSPEmin	-53
 

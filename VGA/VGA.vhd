@@ -33,9 +33,9 @@ END COMPONENT SYNC;
 
     component pll is
         port (
-            clkout_clk : out std_logic;        -- clk
-            clkin_clk  : in  std_logic := 'X'; -- clk
-            rst_reset  : in  std_logic := 'X'  -- reset
+            clk_out_clk : out std_logic;        -- clk
+            clk_in_clk  : in  std_logic := 'X'; -- clk
+            reset_reset  : in  std_logic := 'X'  -- reset
         );
 	 END COMPONENT pll;
  BEGIN
