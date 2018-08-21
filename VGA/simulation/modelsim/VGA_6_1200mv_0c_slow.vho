@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 32-bit"
 -- VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
--- DATE "08/20/2018 21:19:32"
+-- DATE "08/20/2018 21:57:57"
 
 -- 
 -- Device: Altera EP3C16F484C6 Package FBGA484
@@ -36,13 +36,13 @@ USE IEEE.STD_LOGIC_1164.ALL;
 ENTITY 	VGA IS
     PORT (
 	CLOCK_24 : IN std_logic_vector(1 DOWNTO 0);
-	VGA_HS : OUT std_logic;
-	VGA_VS : OUT std_logic;
+	VGA_HS : BUFFER std_logic;
+	VGA_VS : BUFFER std_logic;
 	SW : IN std_logic_vector(1 DOWNTO 0);
 	KEY : IN std_logic_vector(3 DOWNTO 0);
-	VGA_R : OUT std_logic_vector(3 DOWNTO 0);
-	VGA_B : OUT std_logic_vector(3 DOWNTO 0);
-	VGA_G : OUT std_logic_vector(3 DOWNTO 0)
+	VGA_R : BUFFER std_logic_vector(3 DOWNTO 0);
+	VGA_B : BUFFER std_logic_vector(3 DOWNTO 0);
+	VGA_G : BUFFER std_logic_vector(3 DOWNTO 0)
 	);
 END VGA;
 
@@ -401,7 +401,6 @@ SIGNAL \C1|R~1_combout\ : std_logic;
 SIGNAL \C1|B~5_combout\ : std_logic;
 SIGNAL \C1|B~3_combout\ : std_logic;
 SIGNAL \C1|B~4_combout\ : std_logic;
-SIGNAL \C1|B\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \C|altpll_0|sd1|wire_pll7_clk\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \C1|VPOS\ : std_logic_vector(9 DOWNTO 0);
 SIGNAL \C1|SQ_Y2\ : std_logic_vector(9 DOWNTO 0);
@@ -410,6 +409,7 @@ SIGNAL \C1|SQ_X2\ : std_logic_vector(9 DOWNTO 0);
 SIGNAL \C1|SQ_X1\ : std_logic_vector(9 DOWNTO 0);
 SIGNAL \C1|R\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \C1|HPOS\ : std_logic_vector(9 DOWNTO 0);
+SIGNAL \C1|B\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \C1|ALT_INV_LessThan9~0_combout\ : std_logic;
 SIGNAL \C1|ALT_INV_LessThan8~0_combout\ : std_logic;
 
